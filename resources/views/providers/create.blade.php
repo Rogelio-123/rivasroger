@@ -131,8 +131,8 @@
 
 
                     <div class="form-group col-md-6">
-                        <label for="">{!! trans('messages.adress') !!} {!! trans('messages.addres') !!}2</label>
-                        <input type="text" class="form-control" name="adress" id="">
+                        <label for="">{!! trans('messages.address') !!} 2</label>
+                        <input type="text" class="form-control" name="adressTwo" id="">
                         @error('adressTwo')
                             <span class="invalid-feedback d-block" role="alert">
                                 <strong>{{ $message }}</strong>

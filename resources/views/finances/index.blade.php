@@ -12,7 +12,7 @@
                 href="https://datatables.net">official DataTables documentation</a>.</p> --}}
 
         <a href="{{ route('finances.create') }}" class="btn btn-success mb-3 shadow rounded">
-            Create Finance
+            {!! trans('messages.create') !!} {!! trans('messages.finances') !!}
         </a>
 
         {{-- <div class="row">
@@ -25,7 +25,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-dark">Finances</h6>
+                <h6 class="m-0 font-weight-bold text-dark">{!! trans('messages.finances') !!}</h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -34,12 +34,12 @@
                         <thead>
                             <tr>
                                 <th scope="col">Alias</th>
-                                <th scope="col">Bank</th>
-                                <th scope="col">Account</th>
-                                <th scope="col">Owner</th>
-                                <th scope="col">Details</th>
-                                <th scope="col">Edit</th>
-                                <th scope="col">Delete</th>
+                                <th scope="col">{!! trans('messages.bank') !!}</th>
+                                <th scope="col">{!! trans('messages.account') !!}</th>
+                                <th scope="col">{!! trans('messages.owner') !!}</th>
+                                <th scope="col">{!! trans('messages.details') !!}</th>
+                                <th scope="col">{!! trans('messages.edit') !!}</th>
+                                <th scope="col">{!! trans('messages.delete') !!}</th>
                             </tr>
                         </thead>
                         <tbody>

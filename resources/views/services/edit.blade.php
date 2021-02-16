@@ -4,7 +4,7 @@
 
     <div class="card shadow">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-dark">Edit Service</h6>
+            <h6 class="m-0 font-weight-bold text-dark">{!! trans('messages.edit') !!} {!! trans('messages.service') !!}</h6>
         </div>
         <div class="card-body">
             <form method="POST" action="{{ route('services.update', ['service' => $service->id]) }}">
@@ -13,7 +13,7 @@
                 <div class="form-row">
 
                     <div class="form-group col-md-3">
-                        <label for="exampleFormControlSelect1">Service</label>
+                        <label for="exampleFormControlSelect1">{!! trans('messages.service') !!}</label>
                         <input type="text" class="form-control" name="name" value="{{$service->name}}">
 
                         @error('name')
@@ -25,7 +25,7 @@
 
                 </div>
 
-                <button type="submit" class="btn btn-success shadow rounded mb-3">Send</button>
+                <button type="submit" class="btn btn-success shadow rounded mb-3">{!! trans('messages.send') !!}</button>
             </form>
         </div>
     </div>

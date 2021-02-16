@@ -4,7 +4,7 @@
     
    <div class="card shadow">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-dark">Finances</h6>
+        <h6 class="m-0 font-weight-bold text-dark">{!! trans('messages.finances') !!}</h6>
     </div>
        <div class="card-body">
         <form method="POST" action="{{ route('finances.store') }}">
@@ -22,7 +22,7 @@
                 </div>
     
                 <div class="form-group col-md-3">
-                    <label for="">Bank</label>
+                    <label for="">{!! trans('messages.bank') !!}</label>
                     <input value="{{ old('bank') }}" type="text" class="form-control @error('bank') is-invalid @enderror"
                         name="bank">
                     @error('bank')
@@ -33,7 +33,7 @@
                 </div>
     
                 <div class="form-group col-md-3">
-                    <label for="">Account</label>
+                    <label for="">{!! trans('messages.account') !!}</label>
                     <input value="{{ old('account') }}" type="text" class="form-control @error('account') is-invalid @enderror"
                         name="account">
                     @error('account')
@@ -44,7 +44,7 @@
                 </div>
     
                 <div class="form-group col-md-3">
-                    <label for="">Owner</label>
+                    <label for="">{!! trans('messages.owner') !!}</label>
                     <input value="{{ old('owner') }}" type="text" class="form-control @error('owner') is-invalid @enderror"
                         name="owner">
                     @error('owner')
@@ -56,11 +56,11 @@
             </div>
     
             <button type="submit" class="btn btn-success shadow rounded">
-                <i class="fas fa-cart-plus"></i> Send
+                <i class="fas fa-cart-plus"></i>{!! trans('messages.send') !!}
             </button>
     
             <a class="btn btn-primary shadow rounded" href="{{ route('finances.index') }}">
-                <i class="fas fa-angle-left"></i> Back
+                <i class="fas fa-angle-left"></i>{!! trans('messages.back') !!}
             </a>
     
         </form>
