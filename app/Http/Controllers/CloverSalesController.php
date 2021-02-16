@@ -120,5 +120,14 @@ class CloverSalesController extends Controller
             $sumSalesClover += $i->total;
         }
         $salesClover = $sumSalesClover;
+
+        // Pedidos Clover
+        $ordersClover = CloverSales::select('total')->where('fecha_alta', '>=', $from)
+            ->where('fecha_alta', '<=', $to)
+            ->where('estado', 'PAID FULL')
+            ->count();
+
+        return view('clover-sales.filter', compact('salesClover', 'ordersClover'));
     }
+
 }

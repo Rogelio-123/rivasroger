@@ -5,7 +5,7 @@
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">
-            {!! trans('messages.dashboard') !!} - {!! trans('messages.current') !!}
+            {!! trans('messages.filter') !!} - Clover
         </h1>
         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" onclick="window.print()"><i
                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
@@ -50,7 +50,7 @@
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 {!! trans('messages.orders') !!} </div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                {{ $orders }}
+                                {{ $ordersClover }}
                             </div>
                         </div>
                         <div class="col-auto">
@@ -71,7 +71,7 @@
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                 {!! trans('messages.sales') !!}</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                ${{ number_format($sales, 2) }}
+                                ${{ number_format($salesClover, 2) }}
                             </div>
                         </div>
                         <div class="col-auto">
