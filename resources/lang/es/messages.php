@@ -109,6 +109,6 @@ return [
     'reason' => 'Razón',
     'hello' => 'Hola',
     'create' => 'Crear',
-    'adress' => 'Direccion'
+    
 
 ];
