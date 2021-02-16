@@ -12,7 +12,7 @@
                 href="https://datatables.net">official DataTables documentation</a>.</p> --}}
 
         <a href="{{ route('services.create') }}" class="btn btn-success mb-3 shadow rounded">
-            Create Service
+            {!! trans('messages.new') !!}
         </a>
 
         {{-- <div class="row">
@@ -25,7 +25,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-dark">Services</h6>
+                <h6 class="m-0 font-weight-bold text-dark">{!! trans('messages.services') !!}</h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
