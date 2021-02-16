@@ -4,7 +4,7 @@
 
     <div class="card shadow">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-dark">Create Providers</h6>
+            <h6 class="m-0 font-weight-bold text-dark">{!! trans('messages.create') !!} {!! trans('messages.providers') !!}</h6>
         </div>
         <div class="card-body">
             <form method="POST" action="{{ route('providers.store') }}">
@@ -13,7 +13,7 @@
                 <div class="form-row">
 
                     <div class="form-group col-md-4">
-                        <label for="">Provider's Name</label>
+                        <label for="">{!! trans('messages.name') !!}</label>
                         <input type="text" class="form-control" name="name" id="">
                         @error('name')
                             <span class="invalid-feedback d-block" role="alert">
@@ -23,7 +23,7 @@
                     </div>
 
                     <div class="form-group col-md-4">
-                        <label for="">Phone</label>
+                        <label for="">{!! trans('messages.phone') !!}</label>
                         <input type="number" class="form-control" name="phone" id="">
                         @error('phone')
                             <span class="invalid-feedback d-block" role="alert">
@@ -34,7 +34,7 @@
                     </div>
 
                     <div class="form-group col-md-4">
-                        <label for="">Mobile Phone</label>
+                        <label for="">{!! trans('messages.mobile') !!}</label>
                         <input type="number" class="form-control" name="mobile" id="">
                         @error('mobile')
                             <span class="invalid-feedback d-block" role="alert">
@@ -59,7 +59,7 @@
 
 
                     <div class="form-group col-md-4">
-                        <label for="">Contact Name</label>
+                        <label for="">{!! trans('messages.contactName') !!}</label>
                         <input type="text" class="form-control" name="contact" id="">
                         @error('contact')
                             <span class="invalid-feedback d-block" role="alert">
@@ -70,7 +70,7 @@
 
 
                     <div class="form-group col-md-4">
-                        <label for="">City</label>
+                        <label for="">{!! trans('messages.city') !!}</label>
                         <input type="text" class="form-control" name="city" id="">
                         @error('city')
                             <span class="invalid-feedback d-block" role="alert">
@@ -84,7 +84,7 @@
 
                 <div class="form-row">
                     <div class="form-group col-md-4">
-                        <label for="">State</label>
+                        <label for="">{!! trans('messages.state') !!}</label>
                         <input type="text" class="form-control" name="state" id="">
                         @error('state')
                             <span class="invalid-feedback d-block" role="alert">
@@ -96,7 +96,7 @@
 
 
                     <div class="form-group col-md-4">
-                        <label for="">Postal Code</label>
+                        <label for="">{!! trans('messages.postalCode') !!}</label>
                         <input type="number" class="form-control" name="postal" id="">
                         @error('postal')
                             <span class="invalid-feedback d-block" role="alert">
@@ -107,7 +107,7 @@
 
 
                     <div class="form-group col-md-4">
-                        <label for="">Country</label>
+                        <label for="">{!! trans('messages.country') !!}</label>
                         <input type="text" class="form-control" name="country" id="">
                         @error('country')
                             <span class="invalid-feedback d-block" role="alert">
@@ -120,7 +120,7 @@
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="">Adress</label>
+                        <label for="">{!! trans('messages.adress') !!}</label>
                         <input type="text" class="form-control" name="adress" id="">
                         @error('adress')
                             <span class="invalid-feedback d-block" role="alert">
@@ -131,7 +131,7 @@
 
 
                     <div class="form-group col-md-6">
-                        <label for="">Adress 2</label>
+                        <label for="">{!! trans('messages.adress') !!} 2</label>
                         <input type="text" class="form-control" name="adressTwo" id="">
                         @error('adressTwo')
                             <span class="invalid-feedback d-block" role="alert">
@@ -145,7 +145,7 @@
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="exampleFormControlTextarea1">Details</label>
+                        <label for="exampleFormControlTextarea1">{!! trans('messages.details') !!}</label>
                         <textarea class="form-control" name="details" id="exampleFormControlTextarea1" rows="3"></textarea>
                         @error('details')
                             <span class="invalid-feedback d-block" role="alert">
@@ -156,8 +156,8 @@
 
                 </div>
 
-                <button type="submit" class="btn btn-success shadow rounded mb-3">Send</button>
-                <a class="btn btn-primary shadow rounded mb-3" href="{{ route('providers.index') }}">Back</a>
+                <button type="submit" class="btn btn-success shadow rounded mb-3">{!! trans('messages.send') !!}</button>
+                <a class="btn btn-primary shadow rounded mb-3" href="{{ route('providers.index') }}">{!! trans('messages.back') !!}</a>
             </form>
         </div>
     </div>

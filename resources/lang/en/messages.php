@@ -105,5 +105,8 @@ return [
     'hours' => 'Hours',
     'input' => 'Input',
     'output' => 'Output',
-    'reason' => 'Reason'
+    'reason' => 'Reason',
+    'hello' => 'Hello',
+    'create' => 'Create',
+    'adress' => 'Adress',
 ];

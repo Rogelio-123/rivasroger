@@ -38,13 +38,13 @@
                                 <th scope="col">{!! trans('messages.phone') !!}</th>
                                 <th scope="col">{!! trans('messages.mobile') !!}</th>
                                 <th scope="col">{!! trans('messages.email') !!}</th>
-                                <th scope="col">Contact Name</th>
-                                <th scope="col">City</th>
-                                <th scope="col">State</th>
-                                <th scope="col">Postal Code</th>
-                                <th scope="col">Country</th>
-                                <th scope="col">Edit</th>
-                                <th scope="col">Delete</th>
+                                <th scope="col">{!! trans('messages.contactName') !!}</th>
+                                <th scope="col">{!! trans('messages.city') !!}</th>
+                                <th scope="col">{!! trans('messages.state') !!}</th>
+                                <th scope="col">{!! trans('messages.postalCode') !!}</th>
+                                <th scope="col">{!! trans('messages.country') !!}</th>
+                                <th scope="col">{!! trans('messages.edit') !!}</th>
+                                <th scope="col">{!! trans('messages.delete') !!}</th>
                             </tr>
                         </thead>
                         <tbody>

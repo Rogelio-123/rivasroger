@@ -106,6 +106,9 @@ return [
     'hours' => 'Horas',
     'input' => 'Salida',
     'output' => 'Entrada',
-    'reason' => 'Razón'
+    'reason' => 'Razón',
+    'hello' => 'Hola',
+    'create' => 'Crear',
+    'adress' => 'Direccion'
 
 ];

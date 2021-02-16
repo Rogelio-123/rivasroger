@@ -4,7 +4,7 @@
 
     <div class="card shadow">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-dark">Create Service</h6>
+            <h6 class="m-0 font-weight-bold text-dark">{!! trans('messages.crate') !!} {!! trans('messages.service') !!}</h6>
         </div>
         <div class="card-body">
             <form method="POST" action="{{ route('services.store') }}">
@@ -12,7 +12,7 @@
                 <div class="form-row">
 
                     <div class="form-group col-md-3">
-                        <label for="exampleFormControlSelect1">Service</label>
+                        <label for="exampleFormControlSelect1">{!! trans('messages.services') !!}</label>
                         <input type="text" class="form-control" name="name">
 
                         @error('name')
