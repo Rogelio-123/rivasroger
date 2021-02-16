@@ -112,7 +112,7 @@
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="">{!! trans('messages.adress') !!}</label>
+                        <label for="">{!! trans('messages.address') !!}</label>
                         <input type="text" class="form-control" value="{{ $provider->adress }}" name="adress" id="">
                         @error('adress')
                             <span class="invalid-feedback d-block" role="alert">
@@ -122,7 +122,7 @@
                     </div>
 
                     <div class="form-group col-md-6">
-                        <label for="">{!! trans('messages.adress') !!} 2</label>
+                        <label for="">{!! trans('messages.address') !!} 2</label>
                         <input type="text" class="form-control" value="{{ $provider->adressTwo }}" name="adressTwo" id="">
                         @error('adressTwo')
                             <span class="invalid-feedback d-block" role="alert">

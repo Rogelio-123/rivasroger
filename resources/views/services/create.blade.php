@@ -4,7 +4,7 @@
 
     <div class="card shadow">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-dark">{!! trans('messages.crate') !!} {!! trans('messages.service') !!}</h6>
+            <h6 class="m-0 font-weight-bold text-dark">{!! trans('messages.create') !!} {!! trans('messages.service') !!}</h6>
         </div>
         <div class="card-body">
             <form method="POST" action="{{ route('services.store') }}">
@@ -24,7 +24,7 @@
 
                 </div>
 
-                <button type="submit" class="btn btn-success shadow rounded mb-3">Send</button>
+                <button type="submit" class="btn btn-success shadow rounded mb-3">{!! trans('messages.send') !!}</button>
             </form>
         </div>
     </div>

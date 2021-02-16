@@ -34,11 +34,11 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Created</th>
-                                <th scope="col">Updated</th>
-                                <th scope="col">Edit</th>
-                                <th scope="col">Delete</th>
+                                <th scope="col">{!! trans('messages.name') !!}</th>
+                                <th scope="col">{!! trans('messages.created') !!}</th>
+                                <th scope="col">{!! trans('messages.updated') !!}</th>
+                                <th scope="col">{!! trans('messages.edit') !!}</th>
+                                <th scope="col">{!! trans('messages.delete') !!}</th>
                             </tr>
                         </thead>
                         <tbody>
