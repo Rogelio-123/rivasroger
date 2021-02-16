@@ -103,4 +103,22 @@ class CloverSalesController extends Controller
     {
         //
     }
+
+    public function filter(Request $request)
+    {
+        $from = $request->from;
+        $to = $request->to;
+
+        // Ventas Clover
+        $salesClover = CloverSales::select('total')->where('fecha_alta', '>=', $from)
+            ->where('fecha_alta', '<=', $to)
+            ->where('estado', 'PAID FULL')
+            ->get();
+
+        $sumSalesClover = 0;
+        foreach ($salesClover as $i) {
+            $sumSalesClover += $i->total;
+        }
+        $salesClover = $sumSalesClover;
+    }
 }

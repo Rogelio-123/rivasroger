@@ -13,7 +13,7 @@ return [
     'sales'     => 'Ventas',
     'expenses'  => 'Gastos',
     'profits'   => 'Ganancias',
-    'annual'    => 'Gràfica de Ventas Anuales',
+    'annual'    => 'Gráfica de Ventas Anuales',
     'expensesMonth' => 'Gastos del Mes Actual',
     'payroll'   => 'Nòmina',
     'purchase'  => 'Compras',

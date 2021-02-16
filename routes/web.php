@@ -29,6 +29,7 @@ Route::get('/clovers/{clover}', 'CloverSalesController@show')->name('clovers.sho
 Route::get('/clovers/{clover}/edit', 'CloverSalesController@edit')->name('clovers.edit');
 Route::put('/clovers/{clover}', 'CloverSalesController@update')->name('clovers.update');
 Route::delete('/clovers/{clover}', 'CloverSalesController@destroy')->name('clovers.destroy');
+Route::post('/clovers/filter', 'CloverSalesController@filter')->name('clovers.filter');
 
 Route::get('/ubers', 'UberSalesController@index')->name('ubers.index');
 Route::get('/ubers/create', 'UberSalesController@create')->name('ubers.create');
@@ -37,6 +38,7 @@ Route::get('/ubers/{uber}', 'UberSalesController@show')->name('ubers.show');
 Route::get('/ubers/{uber}/edit', 'UberSalesController@edit')->name('ubers.edit');
 Route::put('/ubers/{uber}', 'UberSalesController@update')->name('ubers.update');
 Route::delete('/ubers/{uber}', 'UberSalesController@destroy')->name('ubers.destroy');
+Route::post('/ubers/filter', 'UberSalesController@filter')->name('ubers.filter');
 
 Route::get('/postmates', 'PostmatesSalesController@index')->name('postmates.index');
 Route::get('/postmates/create', 'PostmatesSalesController@create')->name('postmates.create');
@@ -45,6 +47,7 @@ Route::get('/postmates/{postmate}', 'PostmatesSalesController@show')->name('post
 Route::get('/postmates/{postmate}/edit', 'PostmatesSalesController@edit')->name('postmates.edit');
 Route::put('/postmates/{postmate}', 'PostmatesSalesController@update')->name('postmates.update');
 Route::delete('/postmates/{postmate}', 'PostmatesSalesController@destroy')->name('postmates.destroy');
+Route::post('/postmates/filter', 'PostmatesSalesController@filter')->name('postmates.filter');
 
 Route::get('/grubhubs', 'GrubhubSalesController@index')->name('grubhubs.index');
 Route::get('/grubhubs/create', 'GrubhubSalesController@create')->name('grubhubs.create');
@@ -53,22 +56,25 @@ Route::get('/grubhubs/{grubhub}', 'GrubhubSalesController@show')->name('grubhubs
 Route::get('/grubhubs/{grubhub}/edit', 'GrubhubSalesController@edit')->name('grubhubs.edit');
 Route::put('/grubhubs/{grubhub}', 'GrubhubSalesController@update')->name('grubhubs.update');
 Route::delete('/grubhubs/{grubhub}', 'GrubhubSalesController@destroy')->name('grubhubs.destroy');
+Route::post('/grubhubs/filter', 'GrubhubSalesController@filter')->name('grubhubs.filter');
 
-Route::get('/doordashs', 'CloverSalesController@index')->name('doordashs.index');
-Route::get('/doordashs/create', 'CloverSalesController@create')->name('doordashs.create');
-Route::post('/doordashs', 'CloverSalesController@store')->name('doordashs.store');
-Route::get('/doordashs/{doordash}', 'CloverSalesController@show')->name('doordashs.show');
-Route::get('/doordashs/{doordash}/edit', 'CloverSalesController@edit')->name('doordashs.edit');
-Route::put('/doordashs/{doordash}', 'CloverSalesController@update')->name('doordashs.update');
-Route::delete('/doordashs/{doordash}', 'CloverSalesController@destroy')->name('doordashs.destroy');
+Route::get('/doordashs', 'DoordashSalesController@index')->name('doordashs.index');
+Route::get('/doordashs/create', 'DoordashSalesController@create')->name('doordashs.create');
+Route::post('/doordashs', 'DoordashSalesController@store')->name('doordashs.store');
+Route::get('/doordashs/{doordash}', 'DoordashSalesController@show')->name('doordashs.show');
+Route::get('/doordashs/{doordash}/edit', 'DoordashSalesController@edit')->name('doordashs.edit');
+Route::put('/doordashs/{doordash}', 'DoordashSalesController@update')->name('doordashs.update');
+Route::delete('/doordashs/{doordash}', 'DoordashSalesController@destroy')->name('doordashs.destroy');
+Route::post('/doordashs/filter', 'DoordashSalesController@filter')->name('doordashs.filter');
 
-Route::get('/rivasapps', 'CloverSalesController@index')->name('rivasapps.index');
-Route::get('/rivasapps/create', 'CloverSalesController@create')->name('rivasapps.create');
-Route::post('/rivasapps', 'CloverSalesController@store')->name('rivasapps.store');
-Route::get('/rivasapps/{rivasapp}', 'CloverSalesController@show')->name('rivasapps.show');
-Route::get('/rivasapps/{rivasapp}/edit', 'CloverSalesController@edit')->name('rivasapps.edit');
-Route::put('/rivasapps/{rivasapp}', 'CloverSalesController@update')->name('rivasapps.update');
-Route::delete('/rivasapps/{rivasapp}', 'CloverSalesController@destroy')->name('rivasapps.destroy');
+Route::get('/rivasapps', 'RivasappSalesController@index')->name('rivasapps.index');
+Route::get('/rivasapps/create', 'RivasappSalesController@create')->name('rivasapps.create');
+Route::post('/rivasapps', 'RivasappSalesController@store')->name('rivasapps.store');
+Route::get('/rivasapps/{rivasapp}', 'RivasappSalesController@show')->name('rivasapps.show');
+Route::get('/rivasapps/{rivasapp}/edit', 'RivasappSalesController@edit')->name('rivasapps.edit');
+Route::put('/rivasapps/{rivasapp}', 'RivasappSalesController@update')->name('rivasapps.update');
+Route::delete('/rivasapps/{rivasapp}', 'RivasappSalesController@destroy')->name('rivasapps.destroy');
+Route::post('/rivasapps/filter', 'RivasappSalesController@filter')->name('rivasapps.filter');
 
 // Users
 Route::group(['middleware' => ['permission:view_users|create_users|edit_users|delete_users']], function () {
