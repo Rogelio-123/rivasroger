@@ -109,4 +109,7 @@ return [
     'hello' => 'Hello',
     'create' => 'Create',
     'adress' => 'Adress',
+    'purchases' => 'Purchases',
+    'remove' => 'Remove',
+    'cart' => 'Cart'
 ];

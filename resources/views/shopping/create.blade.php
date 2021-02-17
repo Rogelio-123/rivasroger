@@ -6,7 +6,7 @@
    
     <div class="card shadow">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-dark"> Create Purchase</h6>
+            <h6 class="m-0 font-weight-bold text-dark">{!! trans('messages.create') !!} {!! trans('messages.purchase') !!}</h6>
         </div>
         <div class="card-body">
             <form method="POST" action="{{ route('cart.add') }}" enctype="multipart/form-data">
@@ -16,10 +16,10 @@
                     <div class="form-row">
         
                         <div class="form-group col-md-3">
-                            <label for="exampleFormControlSelect1">Provider's</label>
+                            <label for="exampleFormControlSelect1">{!! trans('messages.providers') !!}</label>
                             <select class="form-control @error('provider') is-invalid @enderror " name="provider"
                                 id="exampleFormControlSelect1">
-                                <option value="">- Choose Provider</option>
+                                <option value="">-{!! trans('messages.choose') !!} {!! trans('messages.provider') !!}</option>
                                 @foreach ($providers as $p)
                                     <option value="{{ $p->name }}" {{ old('provider') == $p->name ? 'selected' : '' }}>
                                         {{ $p->name }}
@@ -35,10 +35,10 @@
                         </div>
         
                         <div class="form-group col-md-3">
-                            <label for="exampleFormControlSelect1">Bank</label>
+                            <label for="exampleFormControlSelect1">{!! trans('messages.bank') !!}</label>
                             <select class="form-control @error('bank') is-invalid @enderror " name="bank"
                                 id="exampleFormControlSelect1">
-                                <option value="">- Choose Provider</option>
+                                <option value="">-{!! trans('messages.choose') !!} {!! trans('messages.provider') !!}</option>
                                 @foreach ($banks as $p)
                                     <option value="{{ $p->id }}" {{ old('bank') == $p->id ? 'selected' : '' }}>
                                         {{ $p->alias }}
@@ -54,10 +54,10 @@
                         </div>
         
                         <div class="form-group col-md-3">
-                            <label for="exampleFormControlSelect1">Product Name</label>
+                            <label for="exampleFormControlSelect1">{!! trans('messages.name') !!}</label>
                             <select class="form-control @error('product') is-invalid @enderror " name="product"
                                 id="exampleFormControlSelect1">
-                                <option value="">- Choose Product</option>
+                                <option value="">-{!! trans('messages.choose') !!} {!! trans('messages.product') !!}</option>
                                 @foreach ($products as $p)
                                     <option value="{{ $p->id }}" {{ old('product') == $p->id ? 'selected' : '' }}>
                                         {{ $p->name }}
@@ -76,10 +76,10 @@
                             <label for="">U.M</label>
                             <select class="form-control @error('um') is-invalid @enderror " name="um"
                                 id="exampleFormControlSelect1">
-                                <option value="">- Choose U.M</option>
-                                <option {{ old('um') == 'Ounces' ? 'selected' : '' }}>Ounces</option>
-                                <option {{ old('um') == 'Pounds' ? 'selected' : '' }}>Pounds</option>
-                                <option {{ old('um') == 'Tons' ? 'selected' : '' }}>Tons</option>
+                                <option value="">-{!! trans('messages.choose') !!} U.M</option>
+                                <option {{ old('um') == 'Ounces' ? 'selected' : '' }}>{!! trans('messages.ounces') !!}</option>
+                                <option {{ old('um') == 'Pounds' ? 'selected' : '' }}>{!! trans('messages.pounds') !!}</option>
+                                <option {{ old('um') == 'Tons' ? 'selected' : '' }}>{!! trans('messages.tons') !!}</option>
                             </select>
         
                             @error('um')
@@ -90,14 +90,14 @@
                         </div>
         
                         <div class="form-group col-md-3">
-                            <label for="">Way To Pay</label>
+                            <label for="">{!! trans('messages.pay') !!}</label>
                             <select class="form-control @error('pay') is-invalid @enderror " name="pay"
                                 id="exampleFormControlSelect1">
-                                <option value="">- Choose Pay</option>
-                                <option {{ old('pay') == 'Debit' ? 'selected' : '' }}>Debit</option>
-                                <option {{ old('pay') == 'Cash' ? 'selected' : '' }}>Cash</option>
-                                <option {{ old('pay') == 'Credit Card' ? 'selected' : '' }}>Credit Card</option>
-                                <option {{ old('pay') == 'Bank Transfer' ? 'selected' : '' }}>Bank Transfer</option>
+                                <option value="">-{!! trans('messages.choose') !!} {!! trans('messages.payment') !!}</option>
+                                <option {{ old('pay') == 'Debit' ? 'selected' : '' }}>{!! trans('messages.debit') !!}</option>
+                                <option {{ old('pay') == 'Cash' ? 'selected' : '' }}>{!! trans('messages.cash') !!}</option>
+                                <option {{ old('pay') == 'Credit Card' ? 'selected' : '' }}>{!! trans('messages.credit') !!}</option>
+                                <option {{ old('pay') == 'Bank Transfer' ? 'selected' : '' }}>{!! trans('messages.transfer') !!}</option>
                             </select>
         
                             @error('um')
@@ -111,7 +111,7 @@
                     <div class="form-row">
         
                         <div class="form-group col-md-2">
-                            <label for="">Price</label>
+                            <label for="">{!! trans('messages.price') !!}</label>
                             <input placeholder="$" name="price" type="text"
                                 class="form-control @error('price') is-invalid @enderror " id="valor1" step="0.001"
                                 oninput="calcular()" value={{ old('price') }}>
@@ -124,7 +124,7 @@
                         </div>
         
                         <div class="form-group col-md-2">
-                            <label for="">Quantity</label>
+                            <label for="">{!! trans('messages.quantity') !!}</label>
                             <input placeholder="#" name="quantity" type="number"
                                 class="form-control @error('quantity') is-invalid @enderror " id="valor2" oninput="calcular()"
                                 value={{ old('quantity') }}>
@@ -137,14 +137,14 @@
                         </div>
         
                         <div class="form-group col-md-2">
-                            <label for="">Amount</label>
+                            <label for="">{!! trans('messages.amount') !!}</label>
                             <input placeholder="$" type="text" class="form-control" id="total" step="0.01">
                         </div>
         
                         <div class="form-group col-md-2">
-                            <label for="">Tax</label>
+                            <label for="">{!! trans('messages.tax') !!}</label>
                             <select class="form-control @error('tax') is-invalid @enderror " name="tax" id="valor3">
-                                <option value="">- Choose</option>
+                                <option value="">-{!! trans('messages.choose') !!}</option>
                                 <option value=".16" {{ old('tax') == '.16' ? 'selected' : '' }}>.16</option>
                                 <option value=".08" {{ old('tax') == '.08' ? 'selected' : '' }}>.08</option>
                                 <option value=".05" {{ old('tax') == '.05' ? 'selected' : '' }}>.05</option>
@@ -158,7 +158,7 @@
                         </div>
         
                         <div class="form-group col-md-4">
-                            <label for="exampleFormControlFile1">File Input</label>
+                            <label for="exampleFormControlFile1">{!! trans('messages.output') !!} {!! trans('messages.file') !!}</label>
                             <input type="file" name="archive" class="form-control-file" id="exampleFormControlFile1">
                         </div>
         
@@ -177,11 +177,11 @@
         
                 
                     <button type="submit" class="btn btn-success shadow rounded">
-                        <i class="fas fa-cart-plus"></i> Add
+                        <i class="fas fa-cart-plus"></i>{!! trans('messages.add') !!}
                     </button>
             
                     <a class="btn btn-primary shadow rounded" href="{{ route('shoppings.index') }}">
-                        <i class="fas fa-angle-left"></i> Back
+                        <i class="fas fa-angle-left"></i>{!! trans('messages.back') !!}
                     </a>
             </form>
         </div>
@@ -202,17 +202,17 @@
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Provider</th>
-                            <th scope="col">Product</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Quantity</th>
+                            <th scope="col">{!! trans('messages.provider') !!}</th>
+                            <th scope="col">{!! trans('messages.product') !!}</th>
+                            <th scope="col">{!! trans('messages.price') !!}</th>
+                            <th scope="col">{!! trans('messages.quantity') !!}</th>
                             <th scope="col">U.M</th>
-                            <th scope="col">Amount</th>
-                            <th scope="col">Tax</th>
+                            <th scope="col">{!! trans('messages.amount') !!}</th>
+                            <th scope="col">{!! trans('messages.tax') !!}</th>
                             <th scope="col">%</th>
                             <th scope="col">Total</th>
-                            <th scope="col">Way To Pay</th>
-                            <th scope="col">Remove</th>
+                            <th scope="col">{!! trans('messages.wayToPay') !!}</th>
+                            <th scope="col">{!! trans('messages.remove') !!}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -260,13 +260,12 @@
                 {{ csrf_field() }}
         
                 <button class="btn btn-warning" type="submit">
-                    <i class="fas fa-trash"></i> Clear Shopping Cart
-                </button>
+                    <i class="fas fa-trash"></i>{!! trans('messages.cart') !!}</button>
             </form>
         </div>
         <div class="p-2">
             <a href="{{ route('shoppings.order') }}" class="btn btn-success">
-                <i class="fas fa-clipboard-check"></i> Process Order
+                <i class="fas fa-clipboard-check"></i>{!! trans('messages.process') !!} {!! trans('messages.orders') !!}
             </a>
         </div>
       </div>

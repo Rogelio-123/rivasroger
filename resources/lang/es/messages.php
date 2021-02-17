@@ -109,6 +109,8 @@ return [
     'reason' => 'Razón',
     'hello' => 'Hola',
     'create' => 'Crear',
-    
+    'purchases' => 'Compras',
+    'remove' => 'Eliminar',
+    'cart' => 'Carro de compras limpio'
 
 ];

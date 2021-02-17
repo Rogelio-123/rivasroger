@@ -3,23 +3,23 @@
 @section('content')
     
     <a href="{{ route('shoppings.create') }}" class="btn btn-success shadow rounded mb-3">
-        <i class="fas fa-folder-plus"></i> Create Purchase
+        <i class="fas fa-folder-plus"></i>{!! trans('messages.create') !!} {!! trans('messages.purchase') !!}
     </a>
     {{-- {{ $shops[0]->id }} --}}
     
     <div class="card shadow">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-dark">Purchases</h6>
+            <h6 class="m-0 font-weight-bold text-dark">{!! trans('messages.purchases') !!}</h6>
         </div>
         <div class="card-body">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-                        aria-selected="true">Approve</a>
+                        aria-selected="true">{!! trans('messages.approve') !!}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-                    aria-selected="false">Pending Orders - <?php echo count($ordersPending) ?></a>
+                    aria-selected="false">{!! trans('messages.orders') !!} {!! trans('messages.pending') !!}- <?php echo count($ordersPending) ?></a>
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
@@ -29,11 +29,11 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">User</th>
-                                    <th scope="col">Code</th>
+                                    <th scope="col">{!! trans('messages.user') !!}</th>
+                                    <th scope="col">{!! trans('messages.code') !!}</th>
                                     <th scope="col">Total</th>
-                                    <th scope="col">View</th>
-                                    <th scope="col">Delete</th>
+                                    <th scope="col">{!! trans('messages.view') !!}</th>
+                                    <th scope="col">{!! trans('messages.delete') !!}</th>
             
                                 </tr>
                             </thead>
@@ -76,11 +76,11 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Code</th>
+                                    <th scope="col">{!! trans('messages.code') !!}</th>
                                     <th scope="col">Total</th>
-                                    <th scope="col">Approve</th>
-                                    <th scope="col">View</th>
-                                    <th scope="col">Delete</th>
+                                    <th scope="col">{!! trans('messages.approve') !!}</th>
+                                    <th scope="col">{!! trans('messages.view') !!}</th>
+                                    <th scope="col">{!! trans('messages.delete') !!}</th>
                                 </tr>
                             </thead>
                             <tbody>
