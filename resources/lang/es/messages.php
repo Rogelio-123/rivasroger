@@ -111,6 +111,7 @@ return [
     'create' => 'Crear',
     'purchases' => 'Compras',
     'remove' => 'Eliminar',
-    'cart' => 'Carro de compras limpio'
+    'cart' => 'Carro de compras limpio',
+    'show' => 'Mostrar'
 
 ];

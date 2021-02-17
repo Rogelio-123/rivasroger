@@ -6,29 +6,29 @@
     
     <div class="card shadow">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-dark">Show Purchase</h6>
+            <h6 class="m-0 font-weight-bold text-dark">{!! trans('messages.show') !!} {!! trans('messages.purchase') !!}</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">Date</th>
-                            <th scope="col">Provider</th>
-                            <th scope="col">Product</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Quantity</th>
+                            <th scope="col">{!! trans('messages.date') !!}</th>
+                            <th scope="col">{!! trans('messages.provider') !!}</th>
+                            <th scope="col">{!! trans('messages.product') !!}</th>
+                            <th scope="col">{!! trans('messages.price') !!}</th>
+                            <th scope="col">{!! trans('messages.quantity') !!}</th>
                             <th scope="col">U.M</th>
-                            <th scope="col">Amount</th>
-                            <th scope="col">Tax</th>
+                            <th scope="col">{!! trans('messages.amount') !!}</th>
+                            <th scope="col">{!! trans('messages.tax') !!}</th>
                             <th scope="col">%</th>
                             <th scope="col">SubTotal</th>
-                            <th scope="col">Way To Pay</th>
-                            <th scope="col"># Order</th>
-                            <th scope="col">Order Code</th>
+                            <th scope="col">{!! trans('messages.wayToPay') !!}Way To Pay</th>
+                            <th scope="col"># {!! trans('messages.orders') !!}</th>
+                            <th scope="col">{!! trans('messages.code') !!} {!! trans('messages.orders') !!}</th>
                             
-                            <th scope="col"># Bank</th>
-                            <th scope="col">File</th>
+                            <th scope="col"># {!! trans('messages.bank') !!}</th>
+                            <th scope="col">{!! trans('messages.file') !!}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -67,7 +67,7 @@
                     </tbody>
                 </table>
             </div>
-            <a class="btn btn-primary my-3" href="{{ route('shoppings.index') }}">Back</a>
+            <a class="btn btn-primary my-3" href="{{ route('shoppings.index') }}">{!! trans('messages.back') !!}</a>
         </div>
     </div>
 

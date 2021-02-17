@@ -111,5 +111,6 @@ return [
     'adress' => 'Adress',
     'purchases' => 'Purchases',
     'remove' => 'Remove',
-    'cart' => 'Cart'
+    'cart' => 'Cart',
+    'show' => 'Show'
 ];
