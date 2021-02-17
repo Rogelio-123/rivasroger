@@ -2,19 +2,19 @@
 
 @section('content')
     
-    <a href="{{ route('expenses.create') }}" class="btn btn-success shadow rounded mb-3">Create Expenses</a>
+    <a href="{{ route('expenses.create') }}" class="btn btn-success shadow rounded mb-3">{!! trans('messages.create') !!} {!! trans('messages.expenses') !!}</a>
     
     <div class="card shadow">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-dark">Expenses</h6>
+            <h6 class="m-0 font-weight-bold text-dark">{!! trans('messages.expenses') !!}</h6>
         </div>
         <div class="card-body">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Approve</a>
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">{!! trans('messages.approve') !!}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Pending - <?php echo count($expensesPending) ?></a>
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">{!! trans('messages.pending') !!} - <?php echo count($expensesPending) ?></a>
                 </li>
             </ul>
         
@@ -25,12 +25,12 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Code</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">User</th>
+                                    <th scope="col">{!! trans('messages.code') !!}</th>
+                                    <th scope="col">{!! trans('messages.date') !!}</th>
+                                    <th scope="col">{!! trans('messages.user') !!}</th>
                                     <th scope="col">Total</th>
-                                    <th scope="col">View</th>
-                                    <th scope="col">Delete</th>
+                                    <th scope="col">{!! trans('messages.view') !!}</th>
+                                    <th scope="col">{!! trans('messages.delete') !!}</th>
                                 </tr>
                             </thead>
                             <tbody>

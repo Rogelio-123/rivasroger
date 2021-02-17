@@ -6,7 +6,7 @@
     
     <div class="card shadow">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-dark">Create Expense</h6>
+            <h6 class="m-0 font-weight-bold text-dark">{!! trans('messages.create') !!} {!! trans('messages.expenses') !!}</h6>
         </div>
         <div class="card-body">
             <form method="POST" action="{{ route('expense-cart.add') }}" enctype="multipart/form-data">
@@ -16,10 +16,10 @@
                     <div class="form-row">
         
                         <div class="form-group col-md-3">
-                            <label for="exampleFormControlSelect1">Provider's</label>
+                            <label for="exampleFormControlSelect1">{!! trans('messages.providers') !!}</label>
                             <select class="form-control @error('provider') is-invalid @enderror " name="provider"
                                 id="exampleFormControlSelect1">
-                                <option value="">- Choose Provider</option>
+                                <option value="">-{!! trans('messages.choose') !!} {!! trans('messages.provider') !!}</option>
                                 @foreach ($providers as $p)
                                     <option value="{{ $p->name }}" {{ old('provider') == $p->name ? 'selected' : '' }}>
                                         {{ $p->name }}
@@ -35,10 +35,10 @@
                         </div>
         
                         <div class="form-group col-md-3">
-                            <label for="exampleFormControlSelect1">Service Name</label>
+                            <label for="exampleFormControlSelect1">{!! trans('messages.name') !!} de {!! trans('messages.service') !!}</label>
                             <select class="form-control @error('service') is-invalid @enderror " name="service"
                                 id="exampleFormControlSelect1">
-                                <option value="">- Choose Service</option>
+                                <option value="">-{!! trans('messages.choose') !!} {!! trans('messages.service') !!}</option>
                                 @foreach ($services as $s)
                                     <option value="{{ $s->id }}" {{ old('product') == $s->id ? 'selected' : '' }}>
                                         {{ $s->name }}
@@ -56,7 +56,7 @@
                         </div>
         
                         <div class="form-group col-md-3">
-                            <label for="exampleFormControlSelect1">Ticket Number</label>
+                            <label for="exampleFormControlSelect1">{!! trans('messages.ticketNumber') !!}</label>
                             <input class="form-control @error('provider') is-invalid @enderror" name="ticket" type="text"
                                 placeholder="#">
         
@@ -68,7 +68,7 @@
                         </div>
         
                         <div class="form-group col-md-3">
-                            <label for="exampleFormControlFile1">File Input</label>
+                            <label for="exampleFormControlFile1">{!! trans('messages.file') !!} de {!! trans('messages.input') !!}</label>
                             <input type="file" name="archive" class="form-control-file" id="exampleFormControlFile1">
                         </div>
         
@@ -93,7 +93,7 @@
                     <div class="form-row">
         
                         <div class="form-group col-md-3">
-                            <label for="">Price</label>
+                            <label for="">{!! trans('messages.price') !!}</label>
                             <input placeholder="$" name="price" type="text"
                                 class="form-control @error('price') is-invalid @enderror " id="valor1" step="0.001"
                                 oninput="calcular()" value={{ old('price') }}>
@@ -106,7 +106,7 @@
                         </div>
         
                         <div class="form-group col-md-2">
-                            <label for="">Quantity</label>
+                            <label for="">{!! trans('messages.quantity') !!}</label>
                             <input placeholder="#" name="quantity" type="number"
                                 class="form-control @error('quantity') is-invalid @enderror " id="valor2" oninput="calcular()"
                                 value={{ old('quantity') }}>
@@ -119,14 +119,14 @@
                         </div>
         
                         <div class="form-group col-md-2">
-                            <label for="">Amount</label>
+                            <label for="">{!! trans('messages.amount') !!}</label>
                             <input placeholder="$" type="text" class="form-control" id="total" step="0.01">
                         </div>
         
                         <div class="form-group col-md-2">
-                            <label for="">Tax</label>
+                            <label for="">{!! trans('messages.tax') !!}</label>
                             <select class="form-control @error('tax') is-invalid @enderror " name="tax" id="valor3">
-                                <option value="">- Choose</option>
+                                <option value="">-{!! trans('messages.choose') !!}</option>
                                 <option value=".16" {{ old('tax') == '.16' ? 'selected' : '' }}>.16</option>
                                 <option value=".08" {{ old('tax') == '.08' ? 'selected' : '' }}>.08</option>
                                 <option value=".05" {{ old('tax') == '.05' ? 'selected' : '' }}>.05</option>
@@ -140,14 +140,14 @@
                         </div>
         
                         <div class="form-group col-md-3">
-                            <label for="">Way To Pay</label>
+                            <label for="">{!! trans('messages.wayToPay') !!}</label>
                             <select class="form-control @error('pay') is-invalid @enderror " name="pay"
                                 id="exampleFormControlSelect1">
-                                <option value="">- Choose Pay</option>
-                                <option {{ old('pay') == 'Debit' ? 'selected' : '' }}>Debit</option>
-                                <option {{ old('pay') == 'Cash' ? 'selected' : '' }}>Cash</option>
-                                <option {{ old('pay') == 'Credit Card' ? 'selected' : '' }}>Credit Card</option>
-                                <option {{ old('pay') == 'Bank Transfer' ? 'selected' : '' }}>Bank Transfer</option>
+                                <option value="">-{!! trans('messages.choose') !!} {!! trans('messages.pay') !!}</option>
+                                <option {{ old('pay') == 'Debit' ? 'selected' : '' }}>{!! trans('messages.debit') !!}</option>
+                                <option {{ old('pay') == 'Cash' ? 'selected' : '' }}>{!! trans('messages.cash') !!}</option>
+                                <option {{ old('pay') == 'Credit Card' ? 'selected' : '' }}>{!! trans('messages.credit') !!}</option>
+                                <option {{ old('pay') == 'Bank Transfer' ? 'selected' : '' }}>{!! trans('messages.transfer') !!}</option>
                             </select>
         
                             @error('um')
@@ -171,11 +171,11 @@
                 --}}
         
                 <button type="submit" class="btn btn-success shadow rounded">
-                    <i class="fas fa-cart-plus"></i> Add
+                    <i class="fas fa-cart-plus"></i>{!! trans('messages.add') !!}
                 </button>
         
                 <a class="btn btn-primary shadow rounded" href="{{ route('expenses.index') }}">
-                    <i class="fas fa-angle-left"></i> Back
+                    <i class="fas fa-angle-left"></i>{!! trans('messages.back') !!}
                 </a>
             </form>
         </div>
@@ -195,18 +195,18 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">Archive</th>
+                            <th scope="col">{!! trans('messages.archive') !!}</th>
                             <th scope="col">#</th>
-                            <th scope="col">Provider</th>
-                            <th scope="col">Service</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">Amount</th>
-                            <th scope="col">Tax</th>
+                            <th scope="col">{!! trans('messages.provider') !!}</th>
+                            <th scope="col">{!! trans('messages.service') !!}</th>
+                            <th scope="col">{!! trans('messages.price') !!}</th>
+                            <th scope="col">{!! trans('messages.quantity') !!}</th>
+                            <th scope="col">{!! trans('messages.amount') !!}</th>
+                            <th scope="col">{!! trans('messages.tax') !!}</th>
                             <th scope="col">%</th>
                             <th scope="col">Total</th>
-                            <th scope="col">Pay</th>
-                            <th scope="col">Remove</th>
+                            <th scope="col">{!! trans('messages.pay') !!}</th>
+                            <th scope="col">{!! trans('messages.remove') !!}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -255,13 +255,13 @@
                 {{ csrf_field() }}
 
                 <button class="btn btn-warning" type="submit">
-                    <i class="fas fa-trash"></i> Clear Expense Cart
+                    <i class="fas fa-trash"></i>{!! trans('messages.cart') !!}
                 </button>
             </form>
         </div>
         <div class="p-2">
             <a href="{{ route('expenses.order') }}" class="btn btn-success">
-                <i class="fas fa-clipboard-check"></i> Process Expense
+                <i class="fas fa-clipboard-check"></i>{!! trans('messages.process') !!} {!! trans('messages.expenses') !!}
             </a>
         </div>
     </div>

@@ -112,5 +112,6 @@ return [
     'purchases' => 'Purchases',
     'remove' => 'Remove',
     'cart' => 'Cart',
-    'show' => 'Show'
+    'show' => 'Show',
+    'archive' => 'Archive'
 ];

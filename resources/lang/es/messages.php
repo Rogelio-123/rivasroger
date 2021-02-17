@@ -112,6 +112,7 @@ return [
     'purchases' => 'Compras',
     'remove' => 'Eliminar',
     'cart' => 'Carro de compras limpio',
-    'show' => 'Mostrar'
+    'show' => 'Mostrar',
+    'archive' => 'Archivo'
 
 ];
