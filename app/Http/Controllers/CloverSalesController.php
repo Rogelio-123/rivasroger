@@ -56,9 +56,9 @@ class CloverSalesController extends Controller
             array_push($datos, $salesDay);
         }
 
-        var_dump($datos);
+        // var_dump($datos);
 
-        return view('clover-sales.index', compact('sales', 'orders'));
+        return view('clover-sales.index', compact('sales', 'orders', 'datos'));
     }
 
     /**

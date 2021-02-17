@@ -2,6 +2,14 @@
 
 @section('content')
 
+    {{-- {{ var_dump($datos) }} --}}
+
+    {{-- @foreach ($datos as $item)
+        <p>{{ $item }}</p>
+    @endforeach --}}
+
+    {{ $datos[3] }}
+
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">
@@ -160,7 +168,10 @@
         var myLineChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+                    "11", "12", "13", "14", "15", "16", "17", "18", "19", "20",
+                    "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31",
+                ],
                 datasets: [{
                     label: "Earnings",
                     lineTension: 0.3,
@@ -175,6 +186,13 @@
                     pointHitRadius: 10,
                     pointBorderWidth: 2,
                     data: [
+                        {{ $datos[0] }}, {{ $datos[1] }}, {{ $datos[2] }}, {{ $datos[3] }}, {{ $datos[4] }},
+                        {{ $datos[5] }}, {{ $datos[6] }}, {{ $datos[7] }}, {{ $datos[8] }}, {{ $datos[9] }},
+                        {{ $datos[10] }}, {{ $datos[11] }}, {{ $datos[12] }}, {{ $datos[13] }}, {{ $datos[14] }},
+                        {{ $datos[15] }}, {{ $datos[16] }}, {{ $datos[17] }}, {{ $datos[18] }}, {{ $datos[19] }},
+                        {{ $datos[20] }}, {{ $datos[21] }}, {{ $datos[22] }}, {{ $datos[23] }}, {{ $datos[24] }},
+                        {{ $datos[25] }}, {{ $datos[26] }}, {{ $datos[27] }}, {{ $datos[28] }}, {{ $datos[29] }},
+                        {{ $datos[30] }}                                                 
                     ],
                 }],
             },
