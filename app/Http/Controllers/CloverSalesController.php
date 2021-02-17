@@ -35,38 +35,30 @@ class CloverSalesController extends Controller
         }
         $sales = $sumSales;
 
-        // for ($day = 1; $day <= 31; $day++) {
+        $datos = [];
 
-        //     $from = date("Y-m\-$day");
+        // Ciclo, ventas del mes por día
+        for ($day = 1; $day <= 31; $day++) {
 
-        //     $days = ['uno', 'dos', 'tres', 'cuatro', 'cinco'];
+            $fromDay = date("Y-m\-$day");
 
-        //     // Ventas del Mes
-        //     $day = CloverSales::select('total')->where('fecha_alta', '=', $from)
-        //         ->where('estado', 'PAID FULL')
-        //         ->get();
+            // Ventas del Dìa
+            $salesDay = CloverSales::select('total')->where('fecha_alta', '=', $fromDay)
+                ->where('estado', 'PAID FULL')
+                ->get();
 
-        //     $sum = 0;
-        //     foreach ($day as $i) {
-        //         $sum += $i->total;
-        //     }
-        //     $day = $sum;
-        // }
+            $sum = 0;
+            foreach ($salesDay as $i) {
+                $sum += $i->total;
+            }
+            $salesDay = $sum;
 
-        $fromDay = date('Y-m\-4');
-
-        // Ventas del Día
-        $day = CloverSales::select('total')->where('fecha_alta', '=', $fromDay)
-            ->where('estado', 'PAID FULL')
-            ->get();
-
-        $sum = 0;
-        foreach ($day as $i) {
-            $sum += $i->total;
+            array_push($datos, $salesDay);
         }
-        $day = $sum;
 
-        return view('clover-sales.index', compact('sales', 'orders', 'day'));
+        var_dump($datos);
+
+        return view('clover-sales.index', compact('sales', 'orders'));
     }
 
     /**
