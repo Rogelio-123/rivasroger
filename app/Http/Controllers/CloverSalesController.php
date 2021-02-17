@@ -35,7 +35,38 @@ class CloverSalesController extends Controller
         }
         $sales = $sumSales;
 
-        return view('clover-sales.index', compact('sales', 'orders'));
+        // for ($day = 1; $day <= 31; $day++) {
+
+        //     $from = date("Y-m\-$day");
+
+        //     $days = ['uno', 'dos', 'tres', 'cuatro', 'cinco'];
+
+        //     // Ventas del Mes
+        //     $day = CloverSales::select('total')->where('fecha_alta', '=', $from)
+        //         ->where('estado', 'PAID FULL')
+        //         ->get();
+
+        //     $sum = 0;
+        //     foreach ($day as $i) {
+        //         $sum += $i->total;
+        //     }
+        //     $day = $sum;
+        // }
+
+        $fromDay = date('Y-m\-4');
+
+        // Ventas del Día
+        $day = CloverSales::select('total')->where('fecha_alta', '=', $fromDay)
+            ->where('estado', 'PAID FULL')
+            ->get();
+
+        $sum = 0;
+        foreach ($day as $i) {
+            $sum += $i->total;
+        }
+        $day = $sum;
+
+        return view('clover-sales.index', compact('sales', 'orders', 'day'));
     }
 
     /**
@@ -129,5 +160,4 @@ class CloverSalesController extends Controller
 
         return view('clover-sales.filter', compact('salesClover', 'ordersClover'));
     }
-
 }
