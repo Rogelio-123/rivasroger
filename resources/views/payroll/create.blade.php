@@ -6,7 +6,7 @@
     
     <div class="card shadow">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-dark">Create Payrolls</h6>
+            <h6 class="m-0 font-weight-bold text-dark">{!! trans('messages.create') !!} {!! trans('messages.payrolls') !!}</h6>
         </div>
         <div class="card-body">
             <form method="POST" action="{{ route('payroll-cart.add') }}">
@@ -15,13 +15,13 @@
                 <div class="form-row">
         
                     <div class="form-group col-md-4">
-                        <label for="exampleFormControlSelect1">Employee</label>
+                        <label for="exampleFormControlSelect1">{!! trans('messages.employee') !!}</label>
                         <select class="form-control @error('employee') is-invalid @enderror " name="employee"
                             id="exampleFormControlSelect1">
-                            <option value="">- Choose Employee</option>
+                            <option value="">-{!! trans('messages.choose') !!} {!! trans('messages.employee') !!}</option>
                             @foreach ($employs as $e)
                                 <option value="{{ $e }}" {{ old('employee') == $e->id ? 'selected' : '' }}>
-                                    {{ $e->name }} {{ $e->surname }} - Salary ${{ $e->salary }}
+                                    {{ $e->name }} {{ $e->surname }} -{!! trans('messages.salary') !!} ${{ $e->salary }}
                                 </option>
                             @endforeach
                         </select>
@@ -34,7 +34,7 @@
                     </div>
         
                     <div class="form-group col-md-1">
-                        <label for="">Hours</label>
+                        <label for="">{!! trans('messages.hours') !!}</label>
                         <input placeholder="#" name="hours" type="number" class="form-control @error('hours') is-invalid @enderror "
                             id="valor2" oninput="calcular()" value={{ old('hours') }}>
         
@@ -58,12 +58,12 @@
                     </div>
         
                     <div class="form-group col-md-3">
-                        <label for="">From</label>
+                        <label for="">{!! trans('messages.from') !!}</label>
                         <input type="date" class="form-control" name="from">
                     </div>
         
                     <div class="form-group col-md-3">
-                        <label for="">To</label>
+                        <label for="">{!! trans('messages.to') !!}</label>
                         <input type="date" class="form-control" name="to">
                     </div>
         
@@ -85,11 +85,11 @@
                 --}}
         
                 <button type="submit" class="btn btn-success shadow rounded">
-                    <i class="fas fa-cart-plus"></i> Add
+                    <i class="fas fa-cart-plus"></i>{!! trans('messages.add') !!}
                 </button>
         
                 <a class="btn btn-primary shadow rounded" href="{{ route('shoppings.index') }}">
-                    <i class="fas fa-angle-left"></i> Back
+                    <i class="fas fa-angle-left"></i>{!! trans('messages.back') !!}
                 </a>
             </form>
         </div>
@@ -113,19 +113,19 @@
                                 <tr>
                                     {{-- <th scope="col">#</th>
                                     --}}
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Surname</th>
-                                    <th scope="col">Job Position</th>
-                                    <th scope="col">From</th>
-                                    <th scope="col">To</th>
+                                    <th scope="col">{!! trans('messages.name') !!}</th>
+                                    <th scope="col">{!! trans('messages.surname') !!}</th>
+                                    <th scope="col">{!! trans('messages.position') !!} {!! trans('messages.job') !!}</th>
+                                    <th scope="col">{!! trans('messages.from') !!}</th>
+                                    <th scope="col">{!! trans('messages.to') !!}</th>
                                     {{-- <th scope="col">Salary</th>
                                     --}}
-                                    <th scope="col">Hours</th>
-                                    <th scope="col">Payment</th>
-                                    <th scope="col">Extra H.</th>
-                                    <th scope="col">T. Extra</th>
+                                    <th scope="col">{!! trans('messages.hours') !!}</th>
+                                    <th scope="col">{!! trans('messages.payment') !!}</th>
+                                    <th scope="col">{!! trans('messages.hours') !!} Extra</th>
+                                    <th scope="col">Total de {!! trans('messages.hours') !!} Extra</th>
                                     <th scope="col">Total</th>
-                                    <th scope="col">Remove</th>
+                                    <th scope="col">{!! trans('messages.remove') !!}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -194,7 +194,7 @@
                 {{ csrf_field() }}
 
                 <button class="btn btn-warning" type="submit">
-                    <i class="fas fa-trash"></i> Clear Payroll Cart
+                    <i class="fas fa-trash"></i>{!! trans('messages.cart') !!}
                 </button>
             </form>
         </div>
@@ -204,7 +204,7 @@
                 {{-- <input class="form-control" type="text" id="total">
                 --}}
                 <button id="process" type="submit" class="btn btn-success">
-                    <i class="fas fa-clipboard-check"></i> Process Payroll
+                    <i class="fas fa-clipboard-check"></i>{!! trans('messages.process') !!} {!! trans('messages.payroll') !!}
                 </button>
             </form>
             {{-- <a id="process" class="btn btn-success" href="{{ route('payrolls.order') }}">

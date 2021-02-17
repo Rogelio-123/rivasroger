@@ -11,8 +11,7 @@
             For more information about DataTables, please visit the <a target="_blank"
                 href="https://datatables.net">official DataTables documentation</a>.</p> --}}
 
-        <a href="{{ route('payrolls.create') }}" class="btn btn-success mb-3 shadow rounded">
-            Generate Payroll
+        <a href="{{ route('payrolls.create') }}" class="btn btn-success mb-3 shadow rounded">{!! trans('messages.generate') !!} {!! trans('messages.payroll') !!}
         </a>
 
         {{-- <div class="row">
@@ -25,7 +24,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-dark">Payrolls</h6>
+                <h6 class="m-0 font-weight-bold text-dark">{!! trans('messages.payrolls') !!}</h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -34,12 +33,12 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Date</th>
-                                <th scope="col">User</th>
-                                <th scope="col">Code</th>
+                                <th scope="col">{!! trans('messages.date') !!}</th>
+                                <th scope="col">{!! trans('messages.user') !!}</th>
+                                <th scope="col">{!! trans('messages.code') !!}</th>
                                 <th scope="col">Total</th>
-                                <th scope="col">View</th>
-                                <th scope="col">Delete</th>
+                                <th scope="col">{!! trans('messages.view') !!}</th>
+                                <th scope="col">{!! trans('messages.delete') !!}</th>
             
                             </tr>
                         </thead>

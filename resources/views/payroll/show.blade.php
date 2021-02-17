@@ -6,7 +6,7 @@
     
     <div class="card shadow">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-dark">Show Payrolls</h6>
+            <h6 class="m-0 font-weight-bold text-dark">{!! trans('messages.show') !!} {!! trans('messages.payrolls') !!}</h6>
         </div>
         <div class="card-body">
             
@@ -14,20 +14,20 @@
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Surname</th>
-                            <th scope="col">Job Position</th>
-                            <th scope="col">From</th>
-                            <th scope="col">To</th>
-                            <th scope="col">Salary</th>
-                            <th scope="col">Hours</th>
-                            <th scope="col">Payment</th>
-                            <th scope="col">Extra H.</th>
-                            <th scope="col">T. Extra</th>
+                            <th scope="col">{!! trans('messages.name') !!}</th>
+                            <th scope="col">{!! trans('messages.surname') !!}</th>
+                            <th scope="col">{!! trans('messages.position') !!} {!! trans('messages.job') !!}</th>
+                            <th scope="col">{!! trans('messages.form') !!}</th>
+                            <th scope="col">{!! trans('messages.to') !!}</th>
+                            <th scope="col">{!! trans('messages.salary') !!}</th>
+                            <th scope="col">{!! trans('messages.hours') !!}</th>
+                            <th scope="col">{!! trans('messages.payment') !!}</th>
+                            <th scope="col">{!! trans('messages.hours') !!}</th>
+                            <th scope="col">Total de {!! trans('messages.hours') !!} Extra</th>
                             <th scope="col">Total</th>
-                            <th scope="col">Payroll Code</th>
-                            <th scope="col">Date</th>
-                            <th scope="col">Print</th>
+                            <th scope="col">{!! trans('messages.payroll') !!} {!! trans('messages.code') !!}</th>
+                            <th scope="col">{!! trans('messages.date') !!}</th>
+                            <th scope="col">{!! trans('messages.print') !!}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -80,7 +80,7 @@
                         <td></td>
                     </tfoot>
                 </table>
-                <a class="btn btn-primary my-3" href="{{ route('payrolls.index') }}">Back</a>
+                <a class="btn btn-primary my-3" href="{{ route('payrolls.index') }}">{!! trans('messages.back') !!}</a>
         </div>
     </div>
 

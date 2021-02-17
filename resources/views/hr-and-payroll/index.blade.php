@@ -11,8 +11,8 @@
             For more information about DataTables, please visit the <a target="_blank"
                 href="https://datatables.net">official DataTables documentation</a>.</p> --}}
 
-        <a href="{{ route('hr-and-payroll.create') }}" class="btn btn-success mb-3 shadow rounded">
-            Create Employee
+        <a href="{{ route('hr-and-payroll.create') }}" class="btn btn-success mb-3 shadow rounded">{!! trans('messages.create') !!}
+             {!! trans('messages.employee') !!}
         </a>
 
         {{-- <div class="row">
@@ -25,7 +25,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-dark">Employees</h6>
+                <h6 class="m-0 font-weight-bold text-dark">{!! trans('messages.employees') !!}</h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -33,14 +33,14 @@
 
                         <thead>
                             <tr>
-                                <th scope="col">Date</th>
-                                <th scope="col">Employee Name</th>
-                                <th scope="col">Surname</th>
-                                <th scope="col">Job Position</th>
-                                <th scope="col">Salary</th>
-                                <th scope="col">View</th>
-                                <th scope="col">Edit</th>
-                                <th scope="col">Delete</th>
+                                <th scope="col">{!! trans('messages.date') !!}</th>
+                                <th scope="col">{!! trans('messages.name') !!} del {!! trans('messages.employee') !!}</th>
+                                <th scope="col">{!! trans('messages.surname') !!}</th>
+                                <th scope="col">{!! trans('messages.position') !!} {!! trans('messages.job') !!}</th>
+                                <th scope="col">{!! trans('messages.salary') !!}</th>
+                                <th scope="col">{!! trans('messages.view') !!}</th>
+                                <th scope="col">{!! trans('messages.edit') !!}</th>
+                                <th scope="col">{!! trans('messages.delete') !!}</th>
                             </tr>
                         </thead>
 

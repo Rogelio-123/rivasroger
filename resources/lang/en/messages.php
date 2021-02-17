@@ -113,5 +113,10 @@ return [
     'remove' => 'Remove',
     'cart' => 'Cart',
     'show' => 'Show',
-    'archive' => 'Archive'
+    'archive' => 'Archive',
+    'employee' => 'Employee',
+    'employees' => 'Employees',
+    'position' => 'Position',
+    'generate' => 'Generate',
+    'print' => 'Print'
 ];

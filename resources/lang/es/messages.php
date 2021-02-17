@@ -113,6 +113,11 @@ return [
     'remove' => 'Eliminar',
     'cart' => 'Carro de compras limpio',
     'show' => 'Mostrar',
-    'archive' => 'Archivo'
+    'archive' => 'Archivo',
+    'employee' => 'Trabajador',
+    'employees' => 'Trabajadores',
+    'position' => 'Puesto de',
+    'generate' => 'Generar',
+    'print' => 'Imprimir'
 
 ];
