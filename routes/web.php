@@ -30,6 +30,7 @@ Route::get('/clovers/{clover}/edit', 'CloverSalesController@edit')->name('clover
 Route::put('/clovers/{clover}', 'CloverSalesController@update')->name('clovers.update');
 Route::delete('/clovers/{clover}', 'CloverSalesController@destroy')->name('clovers.destroy');
 Route::post('/clovers/filter', 'CloverSalesController@filter')->name('clovers.filter');
+Route::get('/clovers/mes/{mes}', 'CloverSalesController@mes')->name('clovers.mes');
 
 Route::get('/ubers', 'UberSalesController@index')->name('ubers.index');
 Route::get('/ubers/create', 'UberSalesController@create')->name('ubers.create');
