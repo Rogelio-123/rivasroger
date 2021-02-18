@@ -4,17 +4,17 @@
 
     <div class="card shadow">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-dark">Create Inventory</h6>
+            <h6 class="m-0 font-weight-bold text-dark">{!! trans('messages.create') !!} {!! trans('messages.inventory') !!}</h6>
         </div>
         <div class="card-body">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-                        aria-selected="true">Entry Merchandise</a>
+                        aria-selected="true">{!! trans('messages.entry') !!} {!! trans('messages.merchandise') !!}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                        aria-controls="profile" aria-selected="false">Output Merchandise</a>
+                        aria-controls="profile" aria-selected="false">{!! trans('messages.input') !!} de {!! trans('messages.merchandise') !!}</a>
                 </li>
             </ul>
 
@@ -25,9 +25,9 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-4">
-                                <label for="exampleFormControlSelect1">Product</label>
+                                <label for="exampleFormControlSelect1">{!! trans('messages.product') !!}</label>
                                 <select class="form-control" name="product" id="exampleFormControlSelect1">
-                                    <option value="">- Choose</option>
+                                    <option value="">-{!! trans('messages.choose') !!}</option>
                                     @foreach ($products as $product)
                                         <option value="{{ $product->id }}">{{ $product->name }}</option>
                                     @endforeach
@@ -40,7 +40,7 @@
                             </div>
 
                             <div class="form-group col-md-2">
-                                <label for="quantity">Quantity</label>
+                                <label for="quantity">{!! trans('messages.quantity') !!}</label>
                                 <input placeholder="#" type="number" name="quantity" class="form-control" id="quantity">
                                 @error('quantity')
                                     <span class="invalid-feedback d-block" role="alert">
@@ -50,7 +50,7 @@
                             </div>
 
                             <div class="form-group col-md-4">
-                                <label for="date">Date</label>
+                                <label for="date">{!! trans('messages.date') !!}</label>
                                 <input type="date" class="form-control" name="date" id="date">
                                 @error('date')
                                     <span class="invalid-feedback d-block" role="alert">
@@ -61,8 +61,8 @@
 
                         </div>
 
-                        <button type="submit" class="btn btn-success shadow rounded">Send</button>
-                        <a class="btn btn-primary shadow rounded" href="{{ route('stocks.index') }}">Stock</a>
+                        <button type="submit" class="btn btn-success shadow rounded">{!! trans('messages.send') !!}</button>
+                        <a class="btn btn-primary shadow rounded" href="{{ route('stocks.index') }}">{!! trans('messages.stock') !!}</a>
                     </form>
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -71,9 +71,9 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <label for="exampleFormControlSelect1">Product</label>
+                                <label for="exampleFormControlSelect1">{!! trans('messages.product') !!}</label>
                                 <select class="form-control" name="product" id="exampleFormControlSelect1">
-                                    <option value="">- Choose</option>
+                                    <option value="">-{!! trans('messages.choose') !!}</option>
                                     @foreach ($products as $product)
                                         <option value="{{ $product->id }}">{{ $product->name }}</option>
                                     @endforeach
@@ -91,7 +91,7 @@
                             </div> --}}
 
                             <div class="form-group col-md-2">
-                                <label for="">Quantity</label>
+                                <label for="">{!! trans('messages.quantity') !!}</label>
                                 <input placeholder="#" type="number" name="quantity" class="form-control" id="">
                                 @error('quantity')
                                     <span class="invalid-feedback d-block" role="alert">
@@ -117,7 +117,7 @@
                             </div>
 
                             <div class="form-group col-md-3">
-                                <label for="exampleFormControlSelect1">Reason</label>
+                                <label for="exampleFormControlSelect1">{!! trans('messages.reason') !!}</label>
                                 <select class="form-control" name="reason" id="exampleFormControlSelect1">
                                     <option>Reason 1</option>
                                     <option>Reason 2</option>
@@ -133,7 +133,7 @@
                             </div>
 
                             <div class="form-group col-md-2">
-                                <label for="">Date</label>
+                                <label for="">{!! trans('messages.date') !!}</label>
                                 <input type="date" name="date" class="form-control" id="">
                                 @error('date')
                                     <span class="invalid-feedback d-block" role="alert">
@@ -144,8 +144,8 @@
 
                         </div>
 
-                        <button type="submit" class="btn btn-success shadow rounded">Send</button>
-                        <a class="btn btn-primary shadow rounded" href="{{ route('stocks.index') }}">Stock</a>
+                        <button type="submit" class="btn btn-success shadow rounded">{!! trans('messages.send') !!}</button>
+                        <a class="btn btn-primary shadow rounded" href="{{ route('stocks.index') }}">{!! trans('messages.stock') !!}</a>
                     </form>
                 </div>
             </div>

@@ -118,5 +118,9 @@ return [
     'employees' => 'Employees',
     'position' => 'Position',
     'generate' => 'Generate',
-    'print' => 'Print'
+    'print' => 'Print',
+    'entry' => 'Entry',
+    'merchandise' => 'Merchandise',
+    'stock' => 'Stock',
+    'go' => 'Go'
 ];

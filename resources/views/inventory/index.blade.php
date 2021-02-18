@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <a href="{{ route('stocks.index') }}" class="btn btn-success shadow rounded">Go Stock</a>
+    <a href="{{ route('stocks.index') }}" class="btn btn-success shadow rounded">{!! trans('messages.go') !!} a {!! trans('messages.stock') !!}</a>
     <hr>
 
     <div class="card shadow">
@@ -14,11 +14,11 @@
 
                 <li class="nav-item">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-                        aria-selected="true">Input Merchandise</a>
+                        aria-selected="true">{!! trans('messages.output') !!} de {!! trans('messages.merchandise') !!}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                        aria-controls="profile" aria-selected="false">Output Merchandise</a>
+                        aria-controls="profile" aria-selected="false">{!! trans('messages.input') !!} de {!! trans('messages.merchandise') !!}</a>
                 </li>
                 {{-- <li class="nav-item">
                     <a class="nav-link" id="stock-tab" data-toggle="tab" href="#stock" role="tab" aria-controls="stock"
@@ -31,12 +31,12 @@
                         <table class="table" id="inputs">
                             <thead>
                                 <tr>
-                                    <th scope="col">Product</th>
-                                    <th scope="col">Quantity</th>
-                                    <th scope="col">Date</th>
+                                    <th scope="col">{!! trans('messages.product') !!}</th>
+                                    <th scope="col">{!! trans('messages.quantity') !!}</th>
+                                    <th scope="col">{!! trans('messages.date') !!}</th>
                                     {{-- <th scope="col">Edit</th>
                                     --}}
-                                    <th scope="col">Delete</th>
+                                    <th scope="col">{!! trans('messages.delete') !!}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -82,12 +82,12 @@
                         <table class="table" id="outputs">
                             <thead>
                                 <tr>
-                                    <th scope="col">Product</th>
-                                    <th scope="col">Quantity</th>
+                                    <th scope="col">{!! trans('messages.product') !!}</th>
+                                    <th scope="col">{!! trans('messages.quantity') !!}</th>
                                     <th scope="col">U.M</th>
-                                    <th scope="col">Reason</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Delete</th>
+                                    <th scope="col">{!! trans('messages.reason') !!}</th>
+                                    <th scope="col">{!! trans('messages.date') !!}</th>
+                                    <th scope="col">{!! trans('messages.delete') !!}</th>
                                 </tr>
                             </thead>
                             <tbody>

@@ -118,6 +118,10 @@ return [
     'employees' => 'Trabajadores',
     'position' => 'Puesto de',
     'generate' => 'Generar',
-    'print' => 'Imprimir'
+    'print' => 'Imprimir',
+    'entry' => 'Entrada de',
+    'merchandise' => 'Mercancia',
+    'stock' => 'Almacen',
+    'go' => 'Ir'
 
 ];
